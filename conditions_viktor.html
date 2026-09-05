@@ -1,222 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Conditions d'utilisation — VIKTOR | Anto Labs</title>
-<meta name="description" content="Conditions d'utilisation de VIKTOR : application gratuite, données locales, avertissement de santé. Aucun abonnement n'est ouvert à la vente.">
-<style>
-  :root {
-    --fond:#ffffff; --texte:#1a1a1f; --gris:#5f5f6b; --bord:#e4e4ea;
-    --accent:#b8860b; --carte:#faf9f7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --fond:#0d0d10; --texte:#e8e8ec; --gris:#9a9aa6; --bord:#26262e;
-            --accent:#deb844; --carte:#15151a; }
-  }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; padding:0; background:var(--fond); color:var(--texte);
-    font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  .bandeau {
-    border-bottom:1px solid var(--bord); padding:26px 20px;
-    background:var(--carte);
-  }
-  .bandeau .dedans { max-width:720px; margin:0 auto; }
-  .marque { font-weight:800; letter-spacing:-.01em; font-size:15px;
-            color:var(--accent); text-transform:uppercase; }
-  h1 { margin:6px 0 0; font-size:26px; letter-spacing:-.02em; }
-  .page { max-width:720px; margin:0 auto; padding:32px 20px 80px; }
-  h2 { margin:38px 0 6px; font-size:20px; letter-spacing:-.01em;
-       padding-top:16px; border-top:1px solid var(--bord); }
-  h2:first-of-type { border-top:0; padding-top:0; margin-top:8px; }
-  h3 { margin:26px 0 6px; font-size:16.5px; }
-  p, li { color:var(--texte); }
-  strong { font-weight:700; }
-  ul { padding-left:22px; }
-  li { margin-bottom:5px; }
-  a { color:var(--accent); }
-  hr { border:0; border-top:1px solid var(--bord); margin:32px 0; }
-  code { background:var(--carte); padding:2px 6px; border-radius:5px;
-         font-size:14px; border:1px solid var(--bord); }
-  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; }
-  th { text-align:left; padding:9px 10px; border-bottom:2px solid var(--bord);
-       font-size:13px; text-transform:uppercase; letter-spacing:.04em;
-       color:var(--gris); }
-  td { padding:9px 10px; border-bottom:1px solid var(--bord);
-       vertical-align:top; }
-  td:first-child { font-weight:600; white-space:nowrap; }
-  @media (max-width:560px) {
-    td:first-child { white-space:normal; }
-    table { font-size:14px; }
-  }
-  .encadre { background:var(--carte); border:1px solid var(--bord);
-             border-left:3px solid var(--accent); border-radius:10px;
-             padding:16px 18px; margin:18px 0; }
-  .encadre p:first-child { margin-top:0; }
-  .encadre p:last-child { margin-bottom:0; }
-  .pied { max-width:720px; margin:0 auto; padding:0 20px 60px;
-          color:var(--gris); font-size:13.5px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conditions d’utilisation et d’abonnement — VIKTOR | Anto Labs</title>
+  <meta name="description" content="Conditions d’utilisation et d’abonnement de VIKTOR.">
+  <style>
+    :root { --bg:#fff; --text:#1b1b20; --muted:#62626d; --line:#e5e5eb;
+      --card:#faf9f7; --accent:#9b6d00; --warn:#7a1f1f; --warnbg:#fff0f0; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0e0e11; --text:#ececf0;
+      --muted:#aaaab4; --line:#2b2b32; --card:#17171c; --accent:#e0bb51;
+      --warn:#ffb5b5; --warnbg:#35191b; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text);
+      font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      overflow-wrap:anywhere; }
+    header { background:var(--card); border-bottom:1px solid var(--line); padding:28px 20px; }
+    header div, main, footer { max-width:780px; margin:auto; }
+    .brand { color:var(--accent); font-weight:800; text-transform:uppercase; font-size:14px; }
+    h1 { font-size:28px; line-height:1.2; margin:6px 0; }
+    h2 { border-top:1px solid var(--line); padding-top:28px; margin-top:42px; }
+    h3 { margin-top:28px; }
+    main { padding:28px 20px 70px; }
+    a { color:var(--accent); }
+    .draft { border:2px solid var(--warn); background:var(--warnbg); padding:14px 16px;
+      border-radius:10px; color:var(--warn); font-weight:700; }
+    .meta { color:var(--muted); }
+    .offer { background:var(--card); border:1px solid var(--line); border-radius:10px;
+      padding:14px 18px; }
+    .legalbox { background:var(--card); border:2px solid var(--text);
+      border-radius:10px; padding:16px 18px; }
+    code { background:var(--card); border:1px solid var(--line); padding:2px 5px;
+      border-radius:4px; white-space:normal; overflow-wrap:anywhere; }
+    footer { color:var(--muted); border-top:1px solid var(--line); padding:22px 20px 50px; }
+  </style>
 </head>
 <body>
-  <div class="bandeau">
-    <div class="dedans">
-      <div class="marque">Anto Labs — Software Workshop</div>
-      <h1>Conditions d'utilisation — VIKTOR</h1>
-    </div>
+<header><div><div class="brand">Anto Labs — Software Workshop</div>
+  <h1>Conditions d’utilisation et d’abonnement — VIKTOR</h1></div></header>
+<main>
+  <p class="draft">BROUILLON NON PUBLIABLE — l’identité légale, l’adresse, le
+    téléphone et le médiateur n’ont pas été fournis. Un compte Play personnel
+    monétisé ne remplace pas ces informations. Remplacer tous les champs entre
+    doubles crochets et obtenir une relecture juridique avant la première vente,
+    pays par pays si la diffusion dépasse la France.</p>
+  <p class="meta">Application : VIKTOR: Smart Elite Coach
+    (<code>com.antolabs.viktor</code>)<br>Version : 6 septembre 2026</p>
+
+  <h2>Version française</h2>
+  <h3>1. Éditeur et contact</h3>
+  <ul>
+    <li>Identité ou dénomination : <code>[[IDENTITÉ JURIDIQUE À COMPLÉTER]]</code></li>
+    <li>Forme juridique et capital : <code>[[FORME JURIDIQUE À COMPLÉTER]]</code></li>
+    <li>SIREN, SIRET, RNE ou RCS : <code>[[IMMATRICULATION À COMPLÉTER]]</code></li>
+    <li>TVA : <code>[[NUMÉRO DE TVA OU EXONÉRATION À COMPLÉTER]]</code></li>
+    <li>Adresse : <code>[[ADRESSE PROFESSIONNELLE À COMPLÉTER]]</code></li>
+    <li>Téléphone : <code>[[TÉLÉPHONE PROFESSIONNEL À COMPLÉTER]]</code></li>
+    <li>E-mail : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></li>
+  </ul>
+
+  <h3>2. Objet et acceptation</h3>
+  <p>Ces conditions régissent la relation avec l’éditeur pour l’utilisation de
+    VIKTOR et du service VIKTOR+. Lorsque le paiement Google Play est utilisé,
+    les conditions Google en vigueur indiquent que le contenu est offert par
+    Google Commerce Limited et qu’un contrat distinct est conclu avec cette
+    société. Cette qualification ne détermine pas, à elle seule, le
+    professionnel à nommer dans l’encadré français de garantie : ce point doit
+    être validé avant publication. L’utilisateur peut continuer avec la
+    version gratuite sans souscrire.</p>
+
+  <h3>3. Information de fitness, pas un soin médical</h3>
+  <p>VIKTOR fournit du suivi local, des programmes prédéfinis, des calculs, des
+    repères de progression, des outils de nutrition et des articles. Elle ne
+    fournit ni diagnostic, ni traitement, ni prescription et ne remplace aucun
+    professionnel de santé ou du sport qualifié. L’utilisateur choisit ses
+    charges et arrête l’effort en cas de douleur, malaise ou symptôme inhabituel.</p>
+
+  <h3>4. Version gratuite et VIKTOR+</h3>
+  <p>VIKTOR reste utilisable sans abonnement. La version gratuite comprend les
+    17 programmes, le suivi des séances, les fonctions de base de nutrition et
+    de progression et le niveau gratuit des 209 fiches d’exercices. Les 39
+    fiches de l’Académie sont consultables dans leur niveau gratuit et 4 d’entre
+    elles sont des introductions. Les mêmes 12 analyses approfondies sont en
+    plus offertes en entier en français, anglais, allemand, espagnol et
+    portugais du Brésil.</p>
+  <p>VIKTOR+ débloque les niveaux présentés avant l’achat : exécution détaillée
+    des exercices, les 35 articles de fond complets de l’Académie, historiques
+    et analyses avancés, ainsi que les Méthodes VIKTOR complètes.</p>
+
+  <h3>5. Vente et paiement par Google Play</h3>
+  <p>Google Play fournit la commande, encaisse le paiement, gère les devises et
+    affiche le prix TTC applicable. Selon ses conditions actuelles, Google
+    Commerce Limited est la partie au contrat Google Play. Anto Labs édite
+    VIKTOR et fournit son contenu applicatif, sans recevoir de numéro de carte.
+    L’allocation précise des obligations de garantie doit être confirmée. Le
+    prix, la devise, la période et les phases
+    affichés au moment de la confirmation sont les conditions de la commande.
+    VIKTOR+ est prévu comme service numérique dans le champ EEE de Google Play,
+    car il fournit des fonctions logicielles et une valeur récurrente. Ce
+    classement doit être confirmé avant toute vente publique.</p>
+
+  <h3>6. Offre de lancement prévue</h3>
+  <div class="offer"><ul>
+    <li>Mensuel : 7 jours gratuits, puis 6,99 € pour 1 mois, puis 8,99 € par mois.</li>
+    <li>Annuel : 7 jours gratuits, puis 44,99 € pour 1 an, puis 54,99 € par an.</li>
+  </ul></div>
+  <p>L’offre vise les nouveaux clients qui n’ont jamais eu d’abonnement dans
+    l’application pendant les 60 premiers jours du lancement public. Après la
+    campagne, l’offre standard prévue comprend 7 jours gratuits puis le prix
+    normal. Une offre ne s’applique que si Google Play l’affiche et que
+    l’utilisateur l’accepte. Un utilisateur ayant commencé par le mensuel a
+    déjà eu un abonnement VIKTOR : une bascule ultérieure vers l’annuel doit
+    donc afficher le prix normal de 54,99 €, pas le lancement à 44,99 €.</p>
+
+  <h3>7. Essai, renouvellement et résiliation</h3>
+  <p>L’essai débloque VIKTOR+ immédiatement. À sa fin, Google facture la phase
+    payante affichée, puis renouvelle automatiquement l’abonnement jusqu’à sa
+    résiliation. Pour éviter le premier paiement, il faut résilier avant la
+    date de prélèvement affichée.</p>
+  <p><a href="https://play.google.com/store/account/subscriptions?package=com.antolabs.viktor">Gérer ou résilier VIKTOR+ dans Google Play</a>.</p>
+  <p>La désinstallation ne résilie pas l’abonnement. Une résiliation prend en
+    général effet à la fin de la période payée. Certains pays proposent une
+    résiliation immédiate avec remboursement au prorata lorsque la loi
+    l’impose.</p>
+
+  <h3>8. Changement de formule</h3>
+  <p>Le passage mensuel ↔ annuel suit la date d’effet et la règle de facturation
+    indiquées par Google avant confirmation. Le changement doit remplacer la
+    formule existante et ne pas créer deux abonnements simultanés. Il ne redonne
+    pas droit à une seconde promotion de lancement.</p>
+
+  <h3>9. Rétractation, remboursement et garanties</h3>
+  <p>Pour un achat de service numérique dans l’EEE ou au Royaume-Uni, les
+    conditions Google Play indiquent un droit de rétractation de 14 jours à
+    compter de la conclusion du contrat, matérialisée par la confirmation de
+    la commande Google Play. Google rembourse les paiements reçus,
+    mais peut demander un montant proportionnel au service déjà fourni si son
+    exécution a commencé à la demande de l’utilisateur. Le montant suit donc le
+    droit et les conditions Google en vigueur, sans promesse de remboursement
+    intégral dans tous les cas.</p>
+  <p>L’essai et le délai de rétractation commencent à cette même confirmation
+    de commande. L’essai peut se
+    terminer à J+7 alors que le délai de rétractation court encore jusqu’à
+    J+14. Résilier avant le prélèvement évite le premier paiement ; se rétracter
+    est une démarche distincte auprès de Google Play. Cette clause dépend de la
+    confirmation du classement de VIKTOR+ comme service numérique.</p>
+  <p>Les demandes de paiement, de rétractation ou de remboursement passent par
+    <a href="https://support.google.com/googleplay/answer/15576634?hl=fr">Google Play</a>.
+    Un défaut de l’application ou du contenu peut aussi être signalé à
+    l’adresse de contact. Les garanties légales restent applicables.</p>
+
+  <h3>9 bis. Garantie légale de conformité</h3>
+  <div class="legalbox">
+    <p><strong>Professionnel répondant de la garantie :</strong>
+      <code>[[IDENTITÉ DU PROFESSIONNEL RESPONSABLE DE LA GARANTIE À CONFIRMER]]</code>,
+      <code>[[ADRESSE]]</code>, <code>[[TÉLÉPHONE]]</code>,
+      <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a>.</p>
+    <p>La garantie légale couvre VIKTOR+ pendant toute la période de fourniture
+      de l’abonnement. Le consommateur doit établir le défaut, pas sa date
+      d’apparition. Les mises à jour nécessaires au maintien de la conformité
+      sont dues pendant la même période.</p>
+    <p>La mise en conformité doit être gratuite, sans retard injustifié ni
+      inconvénient majeur. Une réduction du prix ou la fin du contrat avec
+      remboursement est possible si la correction est refusée, impossible,
+      payante, trop retardée, porteuse d’un inconvénient majeur ou reste
+      infructueuse. Un défaut grave peut ouvrir ces recours immédiatement ; un
+      défaut mineur ne suffit pas à mettre fin à un contrat payant.</p>
+    <p>L’indisponibilité nécessaire à une correction suspend la garantie
+      restante. Ces droits viennent des articles L. 224-25-1 à L. 224-25-31 du
+      Code de la consommation. Une obstruction de mauvaise foi expose à
+      l’amende de l’article L. 242-18-1. La garantie des vices cachés reste
+      ouverte pendant deux ans après leur découverte, avec réduction du prix ou
+      remboursement contre renoncement au service.</p>
   </div>
-  <div class="page">
+  <p>L’identité responsable doit être confirmée en tenant compte du contrat
+    Google Play conclu avec Google Commerce Limited. Ce champ bloque la
+    publication.</p>
 
-<p><strong>Éditeur : Anto Labs - Software Workshop</strong><br />
-<strong>Contact : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></strong><br />
-<strong>Application : VIKTOR: Smart Elite Coach (<code>com.antolabs.viktor</code>)</strong><br />
-<strong>Dernière mise à jour : 18 août 2026</strong></p>
+  <h3>10. Données locales, sauvegarde et désinstallation</h3>
+  <p>Les séances, mensurations, repas et photos restent dans l’espace local de
+    l’application. L’utilisateur peut exporter ses données gratuitement depuis
+    les Réglages.</p>
+  <p>La désinstallation peut supprimer la base et les photos locales. Android
+    peut restaurer les réglages et la base locale (notamment séances,
+    mensurations, repas) depuis la sauvegarde privée du compte Google, si la
+    sauvegarde système est activée. Les photos ne sont pas restaurées. Cette
+    fonctionnalité ne garantit pas qu’une sauvegarde sera disponible, et ne
+    résilie pas l’abonnement.</p>
 
-<hr />
+  <h3>11. Mineurs</h3>
+  <p>VIKTOR est accessible à partir de 13 ans et n’est pas destinée aux enfants
+    de moins de 13 ans. Entre 13 et 17 ans, l’utilisation se fait sous la
+    responsabilité du représentant légal, à qui il appartient de vérifier que
+    l’entraînement et les repères nutritionnels conviennent au mineur dont il a
+    la charge. L’Académie traite des compléments alimentaires et des hormones à
+    titre pédagogique : elle décrit des mécanismes et des risques, elle ne
+    recommande la prise d’aucune substance. Aucun achat ne doit être effectué
+    sans l’autorisation du représentant légal et du titulaire du compte Google
+    Play.</p>
 
-<h2>Version française</h2>
+  <h3>12. Propriété intellectuelle</h3>
+  <p>VIKTOR, ses textes, visuels, marques, structure et logiciels sont protégés.
+    L’utilisateur reçoit un droit personnel, non exclusif et non transférable.
+    L’extraction, la revente ou la republication restent interdites hors des
+    exceptions légales.</p>
 
-<h3>En une phrase</h3>
-<p>VIKTOR est une application d'entraînement gratuite qui fonctionne entièrement sur votre téléphone, sans compte ni serveur. Rien n'y est vendu à ce jour.</p>
+  <h3>13. Disponibilité et mises à jour</h3>
+  <p>Anto Labs peut corriger, sécuriser, adapter et enrichir VIKTOR. Une mise à
+    jour peut être nécessaire pour Android ou Google Play. VIKTOR+ conservera
+    une valeur récurrente. Des interruptions raisonnables peuvent survenir pour
+    maintenance, panne Google ou force majeure.</p>
 
-<h3>Ce que vous acceptez, et quand</h3>
-<p>Ces conditions forment le contrat entre vous et Anto Labs pour l'usage de VIKTOR. Vous les acceptez en installant l'application ou en l'utilisant. Si un point ne vous convient pas, la conduite à tenir est simple : n'installez pas VIKTOR, ou désinstallez-le.</p>
-<p>L'application est distribuée par Google Play, dont les conditions s'ajoutent aux présentes sans les remplacer. Aucun achat n'est proposé aujourd'hui, donc aucune condition de vente ne s'applique.</p>
+  <h3>14. Responsabilité</h3>
+  <p>Anto Labs reste responsable là où la loi l’impose. Rien n’exclut les
+    garanties ou responsabilités obligatoires. Sauf règle contraire, Anto Labs
+    ne répond pas d’une mauvaise technique, d’une charge inadaptée, d’un avis
+    médical ignoré, d’une donnée locale supprimée sans export ou d’une panne
+    Google hors de son contrôle.</p>
 
-<h3>Ce que VIKTOR est, et ce qu'il n'est pas</h3>
-<p>VIKTOR propose un catalogue d'exercices, des programmes, une académie théorique, un suivi de séances, de mensurations et d'alimentation. Il calcule des repères à partir de ce que vous saisissez.</p>
+  <h3>15. Évolution des conditions et des prix</h3>
+  <p>Les conditions peuvent évoluer pour une raison claire liée à
+    l’application, au droit, à la sécurité, aux coûts ou aux services. Une
+    modification substantielle est annoncée avant son entrée en vigueur. Une
+    hausse de prix suit le préavis et, si nécessaire, le consentement gérés par
+    Google Play. L’abonné peut résilier avant le nouveau prix.</p>
 
-<div class="encadre">
-<p><strong>VIKTOR n'est pas un dispositif médical et ne remplace ni un médecin, ni un kinésithérapeute, ni un coach sportif diplômé.</strong> Rien dans l'application ne constitue un diagnostic, un traitement ou une prescription. Les contenus de l'Académie sont documentaires et sourcés, ils ne sont pas un avis médical personnalisé.</p>
-<p>La musculation comporte des risques de blessure. Avant de commencer ou de reprendre un entraînement, demandez l'avis d'un professionnel de santé, en particulier si vous êtes enceinte, si vous avez plus de 60 ans, si vous souffrez d'une pathologie cardiaque, respiratoire, articulaire ou métabolique, ou si vous relevez d'une contre-indication connue.</p>
-<p>Vous restez seul juge des charges que vous soulevez et des exercices que vous exécutez. Arrêtez immédiatement en cas de douleur, de vertige ou de gêne inhabituelle, et consultez.</p>
-</div>
+  <h3>16. Réclamation et médiation</h3>
+  <p>Une réclamation doit d’abord être envoyée à l’e-mail ou à l’adresse de
+    l’éditeur, avec l’application, la date d’achat et le problème, sans numéro
+    de carte. Après une réclamation écrite non résolue, le consommateur peut
+    saisir gratuitement :</p>
+  <ul><li><code>[[MÉDIATEUR À COMPLÉTER]]</code></li>
+    <li><code>[[ADRESSE DU MÉDIATEUR À COMPLÉTER]]</code></li>
+    <li><code>[[URL DU MÉDIATEUR À COMPLÉTER]]</code></li></ul>
 
-<p>Les recommandations nutritionnelles de l'application sont des estimations calculées par des formules publiques, à partir des chiffres que vous entrez. Elles ne tiennent compte ni de vos antécédents, ni de vos traitements, ni d'un éventuel trouble du comportement alimentaire. Elles ne conviennent pas à un régime thérapeutique.</p>
+  <h3>17. Droit applicable</h3>
+  <p>Le droit français s’applique sans retirer les protections impératives du
+    pays de résidence du consommateur. Les juridictions compétentes sont celles
+    désignées par les règles de consommation applicables.</p>
 
-<h3>Qui peut utiliser l'application</h3>
-<p>L'application s'adresse aux personnes de <strong>treize ans et plus</strong>. Un mineur doit avoir l'accord de la personne qui exerce l'autorité parentale.</p>
-<p>L'application ne demande ni inscription, ni identifiant, ni adresse électronique. Il n'existe donc aucun compte VIKTOR à créer, à protéger ou à fermer.</p>
+  <h3>18. Documents liés</h3>
+  <p><a href="viktor.html">Politique de confidentialité</a> ·
+    <a href="https://support.google.com/googleplay/android-developer/answer/9900533?hl=fr">Règles Google Play sur les abonnements</a> ·
+    <a href="https://play.google.com/intl/fr_fr/about/play-terms/">Conditions d’utilisation de Google Play applicables en France</a></p>
 
-<h3>VIKTOR Plus n'est pas ouvert à la vente</h3>
-<p>L'application est <strong>gratuite aujourd'hui</strong>, et rien n'y est vendu. Vous verrez peut-être un écran présentant un abonnement appelé VIKTOR Plus : il est en préparation, et la version à jour de l'application n'en propose pas l'achat. Aucun moyen de paiement ne vous est demandé.</p>
-<div class="encadre">
-<p><strong>Le jour où cet abonnement ouvrira, deux choses seront publiées ici AVANT la première vente :</strong> les conditions de vente complètes (prix, durée, essai éventuel, renouvellement, résiliation, remboursement et rétractation) et l'identité complète de l'éditeur exigée par le droit de la consommation.</p>
-<p>Tant que cette page ne les porte pas, il n'y a rien à acheter, et personne ne doit vous demander de payer pour VIKTOR.</p>
-</div>
-<p>Le socle de l'application reste donc utilisable sans payer, et sans limite de durée : le catalogue d'exercices, les programmes, le suivi des séances, des mensurations et de l'alimentation, ainsi que les analyses de l'Académie offertes. Les contenus prévus pour VIKTOR Plus, eux, restent fermés tant que l'abonnement n'existe pas, et aucun moyen ne permet de les ouvrir en payant.</p>
+  <h2>English version</h2>
+  <h3>1. Publisher and scope</h3>
+  <p>VIKTOR is published under the Anto Labs - Software Workshop brand by
+    <code>[[LEGAL IDENTITY TO COMPLETE]]</code>,
+    <code>[[LEGAL FORM AND REGISTRATION TO COMPLETE]]</code>, at
+    <code>[[BUSINESS ADDRESS TO COMPLETE]]</code>. Phone:
+    <code>[[BUSINESS PHONE TO COMPLETE]]</code>. Email:
+    <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a>.
+    These terms govern your relationship with the publisher for app use and
+    the VIKTOR+ service. When Google Play billing is used, the current Google
+    Play terms state that Content is offered by Google Commerce Limited and a
+    separate contract with that company governs the purchase. This does not,
+    by itself, determine the professional responsible for the French statutory
+    conformity notice; that allocation must be confirmed before publication.
+    You can keep using the free features without subscribing.</p>
 
-<h3>Vos données</h3>
-<p>VIKTOR ne collecte rien, ne transmet rien et ne partage rien. Le détail figure dans la <a href="viktor.html">politique de confidentialité</a>, qui fait partie intégrante des présentes conditions.</p>
-<p>Vos séances, vos mensurations et vos photos vivent dans une base locale, sur votre appareil. Vous pouvez les exporter et les effacer depuis les Réglages, et désinstaller l'application les supprime.</p>
-<p>Une nuance à connaître : Android sauvegarde automatiquement une partie des données vers votre espace Google privé, ce qui permet de les retrouver sur un nouveau téléphone. Elle couvre les <strong>préférences</strong>, c'est-à-dire vos réglages, la séance en cours le cas échéant, et vos pas des 90 derniers jours. Elle ne contient <strong>ni votre base d'entraînement, ni vos photos</strong>. Elle vous appartient et transite par Google, jamais par nous.</p>
-<p><strong>Anto Labs ne détient aucune copie de quoi que ce soit</strong> : une suppression est définitive de notre côté, puisque nous n'avons rien. Pensez à exporter avant de changer de téléphone.</p>
+  <h3>2. Fitness information, not medical care</h3>
+  <p>VIKTOR provides local tracking, preset programs, calculations, progress
+    references, nutrition tools, and educational articles. It does not provide
+    diagnosis, treatment, or prescriptions and does not replace a qualified
+    professional. Stop if you feel pain, dizziness, or unusual symptoms.</p>
 
-<h3>Propriété intellectuelle</h3>
-<p>L'application, son code, ses textes, ses illustrations d'exercices, ses programmes et les articles de l'Académie appartiennent à Anto Labs et sont protégés par le droit d'auteur. L'installer vous donne un droit d'usage personnel et non exclusif, rien de plus.</p>
-<p>Vous ne pouvez ni copier, ni redistribuer, ni revendre ces contenus, ni les extraire pour alimenter un autre produit ou un jeu de données d'apprentissage automatique. Les études scientifiques citées dans l'Académie appartiennent à leurs auteurs et sont référencées, jamais reproduites intégralement.</p>
-<p>Les données que vous saisissez restent les vôtres. Nous n'y avons aucun accès et ne revendiquons aucun droit dessus.</p>
+  <h3>3. Free access and VIKTOR+</h3>
+  <p>Free access includes 17 programs, workout tracking, core nutrition and
+    progress tools and the free level of 209 exercise entries. All 39 Academy
+    entries can be read at their free level, and four of them are introductions.
+    The same twelve in-depth analyses are also fully available in English,
+    French, German, and Spanish. VIKTOR+ unlocks detailed
+    exercise guidance, all 35 in-depth Academy articles, advanced history and
+    progress tools, and complete VIKTOR Methods.</p>
 
-<h3>Usage correct</h3>
-<p>Vous vous engagez à ne pas décompiler l'application en dehors de ce que la loi autorise, et à ne pas l'utiliser pour nuire à autrui.</p>
+  <h3>4. Google Play prices and launch offer</h3>
+  <p>Google Play provides checkout and shows the price, currency, taxes,
+    billing period, and phases that form the order. Under the current Google
+    Play terms, Google Commerce Limited is the party to that Google Play
+    contract. Anto Labs publishes VIKTOR and supplies its app content, and
+    receives no card number. The allocation of statutory guarantee duties must
+    be confirmed. VIKTOR+ is intended to be classified as a digital
+    service in the EEA field because it provides ongoing software features and
+    recurring value. This classification must be confirmed before any public
+    sale.</p>
+  <div class="offer"><ul>
+    <li>Monthly planned French launch offer: 7 free days, then €6.99 for 1 month, then €8.99 per month.</li>
+    <li>Annual planned French launch offer: 7 free days, then €44.99 for 1 year, then €54.99 per year.</li>
+  </ul></div>
+  <p>The offer is planned for eligible new customers during the first 60 days
+    of public launch. An offer applies only when Google Play shows it and you
+    accept it. A customer who starts monthly has already held a VIKTOR
+    subscription and is therefore expected to see the normal €54.99 annual
+    price, not the €44.99 launch price, when switching later.</p>
 
-<h3>Disponibilité, mises à jour et fin du service</h3>
-<p>VIKTOR fonctionne hors ligne : aucune panne ne peut vous empêcher de vous entraîner, puisque l'application ne dépend d'aucun serveur qui nous appartienne. Elle échange en revanche avec Google Play, qu'elle interroge au démarrage pour connaître l'état de la boutique.</p>
-<p>L'application est fournie en l'état, et améliorée par des mises à jour. Une mise à jour peut modifier, remplacer ou retirer une fonction, notamment quand une exigence de Google ou une version d'Android l'impose.</p>
-<p>Si Anto Labs décidait d'arrêter VIKTOR, l'annonce serait faite dans l'application et sur cette page. L'application déjà installée continuerait de fonctionner avec vos données locales aussi longtemps que votre appareil le permet, puisqu'elle ne dépend d'aucun service en ligne.</p>
+  <h3>5. Trial, renewal, cancellation, and plan changes</h3>
+  <p>The trial unlocks VIKTOR+ immediately. Google Play then charges the paid
+    phase shown and renews automatically until cancellation. Cancel before the
+    displayed charge date to avoid the first payment. Uninstalling does not
+    cancel.</p>
+  <p><a href="https://play.google.com/store/account/subscriptions?package=com.antolabs.viktor">Manage or cancel on Google Play</a>.</p>
+  <p>Google shows the date and charge rule for a monthly ↔ annual change. The
+    change must replace the existing plan, not create two subscriptions, and
+    does not grant a second launch promotion.</p>
 
-<h3>Responsabilité</h3>
-<p>Anto Labs est tenu à ses obligations légales et ne cherche pas à s'en exonérer.</p>
-<p>En revanche, Anto Labs ne peut pas être tenu responsable des blessures, douleurs ou conséquences de santé liées à la pratique d'un exercice, ni des choix d'entraînement ou d'alimentation que vous faites à partir des indications de l'application. Vous vous entraînez sous votre propre responsabilité, et l'avertissement de santé plus haut fait partie du contrat.</p>
-<p>Anto Labs ne répond pas non plus de la perte de vos données locales causée par la panne, la perte ou le remplacement de votre appareil, ni par une désinstallation. La fonction d'export existe pour cela.</p>
+  <h3>6. Withdrawal, refunds, and guarantees</h3>
+  <p>For a digital service purchase in the EEA or the United Kingdom, the
+    Google Play terms state a 14-day withdrawal right from conclusion of the
+    contract, represented by the Google Play order confirmation. Google
+    reimburses payments received, but may require a
+    proportionate amount for service already supplied when performance began
+    at the customer’s request. The amount follows current law and Google’s
+    current terms; a full refund is not promised in every case.</p>
+  <p>The trial and withdrawal period both start with that same order
+    confirmation. The trial
+    may end at day 7 while withdrawal remains possible until day 14. Cancelling
+    before the displayed charge prevents the first payment; withdrawal is a
+    separate request. This clause depends on VIKTOR+ being confirmed as a
+    digital service. If VIKTOR+ is instead classified as digital content made
+    available immediately, Google applies a different withdrawal rule.
+    Mandatory rights and guarantees remain available. Send
+    payment, withdrawal, or refund requests through
+    <a href="https://support.google.com/googleplay/answer/15576634?hl=en">Google Play</a>
+    first, and report app defects to the publisher.</p>
 
-<h3>Droit applicable et litiges</h3>
-<p>Ces conditions sont soumises au droit français. Si vous êtes consommateur, vous conservez le bénéfice des dispositions impératives protectrices du pays où vous résidez.</p>
-<p>En cas de difficulté, écrivez d'abord à <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a> : la plupart des situations se règlent ainsi. À défaut d'accord, un consommateur peut saisir la juridiction compétente de son lieu de résidence.</p>
+  <h3>6a. Statutory conformity guarantee</h3>
+  <div class="legalbox"><p>The legally responsible professional must be
+    confirmed before publication:
+    <code>[[PROFESSIONAL RESPONSIBLE FOR THE STATUTORY GUARANTEE TO CONFIRM]]</code>.
+    For continuous supply, the guarantee applies throughout the VIKTOR+
+    subscription. It includes necessary updates and a free remedy without
+    unjustified delay or major inconvenience. Depending on the defect and the
+    failed remedy, the consumer may obtain a price reduction or end the
+    contract. French hidden-defect rights also remain available for two years
+    after discovery.</p></div>
 
-<h3>Modifications de ces conditions</h3>
-<p>Toute évolution est publiée à cette adresse, avec sa date de mise à jour. L'ouverture d'un abonnement payant, en particulier, sera annoncée ici et dans l'application avant sa mise en vente.</p>
+  <h3>7. Local data, minors, and intellectual property</h3>
+  <p>Workouts, measurements, meals, and photos stay local. Export is free.
+    Uninstalling may delete the local database and photos. Android may restore
+    settings and the local database (including workouts, measurements, and
+    meals) from the private backup of your Google account if system backup is
+    on; photos are not restored. This feature does not guarantee that a backup
+    will be available, and it does not cancel a subscription. VIKTOR is
+    available from age 13 and is not
+    intended for children under 13. Between 13 and 17, a legal guardian is
+    responsible for the use. The Academy covers supplements and hormones for
+    educational purposes: it describes mechanisms and risks, and recommends no
+    substance. A minor must not purchase without both the legal guardian’s and
+    account holder’s authorization. VIKTOR and its content are protected and
+    licensed only for personal, non-transferable use.</p>
 
-<h3>Contact</h3>
-<p>Pour toute question sur ces conditions : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></p>
+  <h3>8. Availability, liability, and changes</h3>
+  <p>Updates may be needed for security or compatibility. VIKTOR+ will keep
+    providing recurring value. Nothing excludes mandatory consumer guarantees
+    or liability. Material term changes are announced in advance. Subscription
+    price changes follow Google Play notice and consent rules, and you may
+    cancel before a new price applies.</p>
 
-<hr />
+  <h3>9. Complaints, mediation, and law</h3>
+  <p>Complain first by email or post without sending a card number. If the
+    written complaint is unresolved, the designated consumer mediator is:</p>
+  <ul><li><code>[[MEDIATOR TO COMPLETE]]</code></li>
+    <li><code>[[MEDIATOR ADDRESS TO COMPLETE]]</code></li>
+    <li><code>[[MEDIATOR URL TO COMPLETE]]</code></li></ul>
+  <p>French law applies without removing mandatory protections in the
+    consumer’s country of residence. Consumer jurisdiction rules determine the
+    competent courts.</p>
 
-<h2>English version</h2>
-
-<h3>In one sentence</h3>
-<p>VIKTOR is a free training app that runs entirely on your phone, with no account and no server. Nothing in it is sold at this time.</p>
-
-<h3>What you agree to, and when</h3>
-<p>These terms form the agreement between you and Anto Labs for the use of VIKTOR. You accept them by installing or using the app. If something here does not suit you, the answer is simple: do not install VIKTOR, or uninstall it.</p>
-<p>The app is distributed by Google Play, whose terms apply in addition to these without replacing them. No purchase is offered today, so no terms of sale apply.</p>
-
-<h3>What VIKTOR is, and what it is not</h3>
-<p>VIKTOR offers an exercise catalogue, programmes, a theory academy, and tracking for sessions, measurements and food. It computes guidance from the figures you enter.</p>
-
-<div class="encadre">
-<p><strong>VIKTOR is not a medical device and replaces neither a doctor, nor a physiotherapist, nor a qualified coach.</strong> Nothing in the app is a diagnosis, a treatment or a prescription. Academy content is documentary and sourced; it is not personalised medical advice.</p>
-<p>Strength training carries a risk of injury. Before starting or resuming training, seek advice from a health professional, especially if you are pregnant, over 60, living with a cardiac, respiratory, joint or metabolic condition, or subject to a known contraindication.</p>
-<p>You alone judge the loads you lift and the exercises you perform. Stop at once if you feel pain, dizziness or anything unusual, and seek medical advice.</p>
-</div>
-
-<p>The app's nutrition figures are estimates produced by public formulas from the numbers you enter. They account for neither your medical history, nor your treatments, nor any eating disorder. They are not suitable for a therapeutic diet.</p>
-
-<h3>Who may use the app</h3>
-<p>The app is intended for people aged <strong>thirteen and over</strong>. A minor needs the agreement of their parent or guardian.</p>
-<p>The app asks for no sign-up, no identifier and no e-mail address. There is therefore no VIKTOR account to create, secure or close.</p>
-
-<h3>VIKTOR Plus is not on sale</h3>
-<p>The app is <strong>free today</strong>, and nothing in it is sold. You may see a screen presenting a subscription called VIKTOR Plus: it is in preparation, and the current version of the app does not offer it for purchase. No payment method is asked of you.</p>
-<div class="encadre">
-<p><strong>On the day that subscription opens, two things will be published here BEFORE the first sale:</strong> the full terms of sale (price, duration, any trial, renewal, cancellation, refunds and withdrawal) and the editor's full identity as consumer law requires.</p>
-<p>Until this page carries them, there is nothing to buy, and nobody should ask you to pay for VIKTOR.</p>
-</div>
-<p>The core of the app is therefore usable without paying, with no time limit: the exercise catalogue, the programmes, tracking for sessions, measurements and food, and the free Academy analyses. The content intended for VIKTOR Plus stays closed while the subscription does not exist, and no means allows you to open it by paying.</p>
-
-<h3>Your data</h3>
-<p>VIKTOR collects nothing, transmits nothing and shares nothing. The detail is in the <a href="viktor.html">privacy policy</a>, which forms part of these terms.</p>
-<p>Your sessions, measurements and photos live in a local database on your device. You can export and erase them from Settings, and uninstalling the app deletes them.</p>
-<p>One nuance worth knowing: Android automatically backs up part of the data to your private Google space, so you can find it again on a new phone. It covers <strong>preferences</strong>, meaning your settings, the session in progress where there is one, and your steps for the last 90 days. It contains <strong>neither your training database nor your photos</strong>. It belongs to you and passes through Google, never through us.</p>
-<p><strong>Anto Labs holds no copy of anything</strong>: deletion is permanent on our side, because we hold nothing. Remember to export before changing phones.</p>
-
-<h3>Intellectual property</h3>
-<p>The app, its code, its texts, its exercise illustrations, its programmes and the Academy articles belong to Anto Labs and are protected by copyright. Installing it grants a personal, non-exclusive right of use, and nothing more.</p>
-<p>You may not copy, redistribute or resell this content, nor extract it to feed another product or a machine-learning dataset. The scientific studies cited in the Academy belong to their authors and are referenced, never reproduced in full.</p>
-<p>The data you enter remains yours. We have no access to it and claim no rights over it.</p>
-
-<h3>Fair use</h3>
-<p>You agree not to decompile the app beyond what the law permits, and not to use it to harm others.</p>
-
-<h3>Availability, updates and end of service</h3>
-<p>VIKTOR works offline: no outage can stop you from training, because the app depends on no server of ours. It does talk to Google Play, which it queries at start-up for the state of the store.</p>
-<p>The app is provided as is and improved through updates. An update may change, replace or remove a feature, in particular where a Google requirement or an Android version demands it.</p>
-<p>Were Anto Labs to discontinue VIKTOR, the announcement would be made in the app and on this page. The app already installed would keep working with your local data for as long as your device allows, since it depends on no online service.</p>
-
-<h3>Liability</h3>
-<p>Anto Labs is bound by its legal obligations and does not seek to escape them.</p>
-<p>Anto Labs cannot, however, be held liable for injuries, pain or health consequences arising from performing an exercise, nor for the training and nutrition choices you make from the app's guidance. You train under your own responsibility, and the health warning above is part of this agreement.</p>
-<p>Nor is Anto Labs liable for the loss of your local data caused by device failure, loss or replacement, or by uninstalling. The export function exists for that reason.</p>
-
-<h3>Governing law and disputes</h3>
-<p>These terms are governed by French law. If you are a consumer, you keep the benefit of the mandatory protective provisions of your country of residence.</p>
-<p>If something goes wrong, write first to <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a>: most situations are settled that way. Failing agreement, a consumer may bring the matter before the competent court of their place of residence.</p>
-
-<h3>Changes to these terms</h3>
-<p>Any change is published at this address with its update date. The opening of a paid subscription, in particular, will be announced here and in the app before it goes on sale.</p>
-
-<h3>Contact</h3>
-<p>Any question about these terms: <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></p>
-
-  </div>
-  <div class="pied">
-    Anto Labs - Software Workshop · <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a><br>
-    Cette page contient les conditions d'utilisation officielles de
-    l'application VIKTOR, publiée sur Google Play sous l'identifiant
-    <code>com.antolabs.viktor</code>. Voir aussi la
-    <a href="viktor.html">politique de confidentialité</a>.
-  </div>
+  <h3>10. Related documents</h3>
+  <p><a href="viktor.html">Privacy policy</a> ·
+    <a href="https://support.google.com/googleplay/android-developer/answer/9900533?hl=en">Google Play subscription policy</a> ·
+    <a href="https://play.google.com/intl/en_uk/about/play-terms/">Google Play terms in English (United Kingdom; use the version applicable to your country)</a></p>
+</main>
+<footer>Anto Labs - Software Workshop ·
+  <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></footer>
 </body>
 </html>

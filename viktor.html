@@ -1,169 +1,265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité — VIKTOR | Anto Labs</title>
-<meta name="description" content="Politique de confidentialité de VIKTOR. Vos données restent sur votre téléphone : aucun compte, aucun serveur, aucune publicité.">
-<style>
-  :root {
-    --fond:#ffffff; --texte:#1a1a1f; --gris:#5f5f6b; --bord:#e4e4ea;
-    --accent:#b8860b; --carte:#faf9f7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --fond:#0d0d10; --texte:#e8e8ec; --gris:#9a9aa6; --bord:#26262e;
-            --accent:#deb844; --carte:#15151a; }
-  }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; padding:0; background:var(--fond); color:var(--texte);
-    font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  .bandeau {
-    border-bottom:1px solid var(--bord); padding:26px 20px;
-    background:var(--carte);
-  }
-  .bandeau .dedans { max-width:720px; margin:0 auto; }
-  .marque { font-weight:800; letter-spacing:-.01em; font-size:15px;
-            color:var(--accent); text-transform:uppercase; }
-  h1 { margin:6px 0 0; font-size:26px; letter-spacing:-.02em; }
-  .page { max-width:720px; margin:0 auto; padding:32px 20px 80px; }
-  h2 { margin:38px 0 6px; font-size:20px; letter-spacing:-.01em;
-       padding-top:16px; border-top:1px solid var(--bord); }
-  h2:first-of-type { border-top:0; padding-top:0; margin-top:8px; }
-  h3 { margin:26px 0 6px; font-size:16.5px; }
-  p, li { color:var(--texte); }
-  strong { font-weight:700; }
-  ul { padding-left:22px; }
-  li { margin-bottom:5px; }
-  a { color:var(--accent); }
-  hr { border:0; border-top:1px solid var(--bord); margin:32px 0; }
-  code { background:var(--carte); padding:2px 6px; border-radius:5px;
-         font-size:14px; border:1px solid var(--bord); }
-  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; }
-  th { text-align:left; padding:9px 10px; border-bottom:2px solid var(--bord);
-       font-size:13px; text-transform:uppercase; letter-spacing:.04em;
-       color:var(--gris); }
-  td { padding:9px 10px; border-bottom:1px solid var(--bord);
-       vertical-align:top; }
-  td:first-child { font-weight:600; white-space:nowrap; }
-  @media (max-width:560px) {
-    td:first-child { white-space:normal; }
-    table { font-size:14px; }
-  }
-  .pied { max-width:720px; margin:0 auto; padding:0 20px 60px;
-          color:var(--gris); font-size:13.5px; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité — VIKTOR | Anto Labs</title>
+  <meta name="description" content="Politique de confidentialité de VIKTOR.">
+  <style>
+    :root { --bg:#fff; --text:#1b1b20; --muted:#62626d; --line:#e5e5eb;
+      --card:#faf9f7; --accent:#9b6d00; --warn:#7a1f1f; --warnbg:#fff0f0; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#0e0e11; --text:#ececf0;
+      --muted:#aaaab4; --line:#2b2b32; --card:#17171c; --accent:#e0bb51;
+      --warn:#ffb5b5; --warnbg:#35191b; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text);
+      font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      overflow-wrap:anywhere; }
+    header { background:var(--card); border-bottom:1px solid var(--line); padding:28px 20px; }
+    header div, main, footer { max-width:780px; margin:auto; }
+    .brand { color:var(--accent); font-weight:800; text-transform:uppercase; font-size:14px; }
+    h1 { font-size:28px; line-height:1.2; margin:6px 0; }
+    h2 { border-top:1px solid var(--line); padding-top:28px; margin-top:42px; }
+    h3 { margin-top:28px; }
+    main { padding:28px 20px 70px; }
+    a { color:var(--accent); }
+    table { width:100%; border-collapse:collapse; display:block; overflow-x:auto; }
+    th, td { border-bottom:1px solid var(--line); padding:9px; text-align:left; vertical-align:top; }
+    th { font-size:13px; color:var(--muted); text-transform:uppercase; }
+    .draft { border:2px solid var(--warn); background:var(--warnbg); padding:14px 16px;
+      border-radius:10px; color:var(--warn); font-weight:700; }
+    .meta { color:var(--muted); }
+    code { background:var(--card); border:1px solid var(--line); padding:2px 5px;
+      border-radius:4px; white-space:normal; overflow-wrap:anywhere; }
+    footer { color:var(--muted); border-top:1px solid var(--line); padding:22px 20px 50px; }
+  </style>
 </head>
 <body>
-  <div class="bandeau">
-    <div class="dedans">
-      <div class="marque">Anto Labs — Software Workshop</div>
-      <h1>Politique de confidentialité — VIKTOR</h1>
-    </div>
-  </div>
-  <div class="page">
+<header><div><div class="brand">Anto Labs — Software Workshop</div>
+  <h1>Politique de confidentialité — VIKTOR</h1></div></header>
+<main>
+  <p class="draft">BROUILLON NON PUBLIABLE — l’identité et l’adresse du
+    responsable n’ont pas été fournies. Un compte Play personnel monétisé ne
+    remplace pas ces informations. Remplacer tous les champs entre doubles
+    crochets et faire valider la portée territoriale avant publication.</p>
+  <p class="meta">Application : VIKTOR: Smart Elite Coach
+    (<code>com.antolabs.viktor</code>)<br>Version : 6 septembre 2026<br>
+    Contact : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></p>
 
-<p><strong>Éditeur : Anto Labs - Software Workshop</strong><br />
-<strong>Contact : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></strong><br />
-<strong>Application : VIKTOR: Smart Elite Coach (<code>com.antolabs.viktor</code>)</strong><br />
-<strong>Dernière mise à jour : 18 août 2026</strong></p>
-<hr />
-<h2>Version française</h2>
-<h3>En une phrase</h3>
-<p>VIKTOR ne collecte aucune donnée, n&#x27;en transmet aucune, et n&#x27;en partage aucune. Tout ce que vous saisissez reste sur votre téléphone.</p>
-<h3>Ce que l&#x27;application enregistre, et où</h3>
-<p>VIKTOR enregistre vos entraînements, vos mensurations, votre poids, vos photos de progression, vos repas et vos réglages <strong>dans une base de données locale, stockée sur votre appareil</strong>. Ces informations ne quittent jamais le téléphone : l&#x27;application ne comporte aucun serveur qui nous appartienne, aucun compte utilisateur, aucune synchronisation. Seul l&#x27;achat d&#x27;un abonnement fait intervenir un service extérieur, celui de Google Play, décrit plus bas.</p>
-<h3>Ce que l&#x27;application ne fait pas</h3>
-<ul>
-<li>Aucune inscription, aucun identifiant, aucune adresse e-mail demandée.</li>
-<li>Aucune publicité, aucun traqueur, aucun outil de mesure d&#x27;audience.</li>
-<li>Aucun envoi de données à Anto Labs ni à un tiers, y compris en cas de plantage.</li>
-<li>Aucun accès à vos contacts, à votre position, à votre microphone ni à votre appareil photo.</li>
-</ul>
-<h3>Permissions demandées</h3>
-<table>
-<tr><th>Permission</th><th>Pourquoi</th></tr>
-<tr><td>Reconnaissance d&#x27;activité (podomètre)</td><td>Afficher vos pas du jour dans l&#x27;application et son widget. La donnée est lue par le capteur du téléphone et n&#x27;est jamais transmise.</td></tr>
-<tr><td>Notifications</td><td>Vous envoyer les rappels que <strong>vous</strong> avez activés (pas du soir, coucher, bilan de la semaine, brief du coach).</td></tr>
-<tr><td>Vibreur</td><td>Signaler la fin d&#x27;un temps de repos.</td></tr>
-<tr><td>Photos (à la demande)</td><td>Enregistrer vos photos de progression, uniquement si vous en ajoutez. Elles restent sur l&#x27;appareil.</td></tr>
-</table>
-<h3>Abonnement VIKTOR Plus</h3>
-<p>Un abonnement facultatif, VIKTOR Plus, est en préparation. <strong>Il n&#x27;est pas ouvert à la vente</strong> : la version à jour de l&#x27;application n&#x27;en propose pas l&#x27;achat. Le jour où il ouvrira, la transaction sera traitée <strong>entièrement par Google Play</strong> et VIKTOR ne verra, ne recevra et ne conservera aucune donnée bancaire : ni numéro de carte, ni identité de facturation, ni adresse.</p>
-<p>L&#x27;application mémorise uniquement, sur votre téléphone, si un abonnement est actif. Cette information ne quitte pas l&#x27;appareil.</p>
-<p>La gestion de l&#x27;abonnement (résiliation, remboursement, historique) se fait depuis votre compte Google Play, dans la rubrique Abonnements. Les conditions de Google Play s&#x27;appliquent à ces transactions.</p>
-<h3>Vos données vous appartiennent</h3>
-<ul>
-<li><strong>Exporter</strong> : Réglages → Sauvegarde → Exporter. Vous obtenez un fichier lisible, que vous seul possédez.</li>
-<li><strong>Effacer</strong> : Réglages → Zone de danger. La suppression est immédiate et définitive.</li>
-<li><strong>Désinstaller</strong> : supprime la base d&#x27;entraînement et les photos de l&#x27;appareil.</li>
-</ul>
-<p>Aucune de ces opérations ne nous est signalée : nous n&#x27;avons aucun moyen de savoir que vous utilisez VIKTOR.</p>
-<h3>La sauvegarde automatique d&#x27;Android</h3>
-<p>Android sauvegarde une partie des données de l&#x27;application vers votre espace Google privé, afin de vous les rendre sur un nouveau téléphone. Nous avons restreint cette sauvegarde aux <strong>préférences</strong>, qui contiennent vos réglages, mais aussi la séance en cours si vous en avez une, et vos pas des 90 derniers jours.</p>
-<p><strong>Votre base d&#x27;entraînement et vos photos en sont exclues</strong> : elles ne quittent jamais l&#x27;appareil.</p>
-<p>Cette sauvegarde vous appartient et relève de votre compte Google. Anto Labs n&#x27;y a aucun accès. Vous pouvez la désactiver dans les réglages Android, rubrique Sauvegarde.</p>
-<h3>Enfants</h3>
-<p>VIKTOR n&#x27;est pas destiné aux enfants de moins de treize ans et ne collecte sciemment aucune donnée les concernant — n&#x27;en collectant aucune de personne.</p>
-<h3>Modifications</h3>
-<p>Toute évolution de cette politique sera publiée à cette adresse, avec une date de mise à jour. Si l&#x27;application venait un jour à transmettre la moindre donnée, cela serait annoncé ici et vous en seriez informé dans l&#x27;application avant que cela ne prenne effet.</p>
-<h3>Contact</h3>
-<p>Pour toute question : <strong><a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></strong></p>
-<h3>Conditions d&#x27;utilisation</h3>
-<p>L&#x27;usage de l&#x27;application et de l&#x27;abonnement VIKTOR Plus est régi par les <a href="conditions_viktor.html">conditions d&#x27;utilisation</a>, publiées à côté de cette page.</p>
-<hr />
-<h2>English version</h2>
-<h3>In one sentence</h3>
-<p>VIKTOR collects no data, transmits no data, and shares no data. Everything you enter stays on your phone.</p>
-<h3>What the app stores, and where</h3>
-<p>VIKTOR stores your workouts, measurements, weight, progress photos, meals and settings <strong>in a local database on your device</strong>. This information never leaves the phone: the app has no server of its own, no user account and no synchronisation. The only outside service involved is Google Play, and only if you subscribe — see below.</p>
-<h3>What the app does not do</h3>
-<ul>
-<li>No sign-up, no identifier, no e-mail address requested.</li>
-<li>No advertising, no trackers, no analytics.</li>
-<li>No data sent to Anto Labs or to any third party, including on crashes.</li>
-<li>No access to your contacts, location, microphone or camera.</li>
-</ul>
-<h3>Permissions requested</h3>
-<table>
-<tr><th>Permission</th><th>Why</th></tr>
-<tr><td>Activity recognition (step counter)</td><td>Show today&#x27;s steps in the app and its widget. The value is read from the phone&#x27;s own sensor and is never transmitted.</td></tr>
-<tr><td>Notifications</td><td>Send the reminders <strong>you</strong> switch on (evening steps, bedtime, weekly review, coach brief).</td></tr>
-<tr><td>Vibration</td><td>Signal the end of a rest period.</td></tr>
-<tr><td>Photos (on request)</td><td>Save your progress photos, only if you add any. They stay on the device.</td></tr>
-</table>
-<h3>VIKTOR Plus subscription</h3>
-<p>An optional subscription, VIKTOR Plus, is in preparation. <strong>It is not on sale</strong>: the current version of the app does not offer it for purchase. When it opens, payment will be handled <strong>entirely by Google Play</strong>, and VIKTOR will never see, receive or store any payment data: no card number, no billing identity, no address.</p>
-<p>The app only records on your phone whether a subscription is active. That information never leaves the device.</p>
-<p>You manage the subscription — cancellation, refunds, history — from your Google Play account, under Subscriptions. Google Play&#x27;s terms apply to those transactions.</p>
-<h3>Your data is yours</h3>
-<ul>
-<li><strong>Export</strong>: Settings → Backup → Export. You get a readable file that only you hold.</li>
-<li><strong>Erase</strong>: Settings → Danger zone. Deletion is immediate and permanent.</li>
-<li><strong>Uninstall</strong>: removes the training database and photos from the device.</li>
-</ul>
-<p>None of these actions are reported to us: we have no way of knowing that you use VIKTOR at all.</p>
-<h3>Android&#x27;s automatic backup</h3>
-<p>Android backs up part of the app&#x27;s data to your private Google space, so you get it back on a new phone. We restricted that backup to <strong>preferences</strong>, which hold your settings, but also the session in progress if you have one, and your steps for the last 90 days.</p>
-<p><strong>Your training database and your photos are excluded from it</strong>: they never leave the device.</p>
-<p>That backup is yours and belongs to your Google account. Anto Labs has no access to it. You can switch it off in Android settings, under Backup.</p>
-<h3>Children</h3>
-<p>VIKTOR is not directed at children under thirteen and knowingly collects no data about them — collecting none about anyone.</p>
-<h3>Changes</h3>
-<p>Any change to this policy will be published at this address with an updated date. Should the app ever transmit any data, it would be announced here, and you would be told inside the app before it took effect.</p>
-<h3>Contact</h3>
-<p>Questions: <strong><a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></strong></p>
-<h3>Terms of use</h3>
-<p>Use of the app and of the VIKTOR Plus subscription is governed by the <a href="conditions_viktor.html">terms of use</a>, published alongside this page.</p>
+  <h2>Version française</h2>
+  <h3>1. Responsable et portée</h3>
+  <p>Le responsable est <code>[[IDENTITÉ JURIDIQUE À COMPLÉTER]]</code>, sous
+    la marque Anto Labs - Software Workshop, à l’adresse
+    <code>[[ADRESSE PROFESSIONNELLE À COMPLÉTER]]</code>. Contact :
+    <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a>.</p>
+  <p>Cette politique couvre VIKTOR et les données de commande que son éditeur
+    peut consulter dans Play Console. Google traite aussi les achats Google
+    Play et la sauvegarde Android pour ses propres finalités.</p>
 
-  </div>
-  <div class="pied">
-    Anto Labs - Software Workshop · <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a><br>
-    Cette page est la politique de confidentialité officielle de l'application
-    VIKTOR, publiée sur Google Play sous l'identifiant
-    <code>com.antolabs.viktor</code>. Voir aussi les
-    <a href="conditions_viktor.html">conditions d'utilisation</a>.
-  </div>
+  <h3>2. Le principe</h3>
+  <p>Anto Labs ne reçoit pas les séances, mensurations, photos, repas ou réglages
+    saisis dans VIKTOR. L’application n’a aucun compte Anto Labs, aucun serveur
+    Anto Labs, aucune publicité, aucun outil d’audience et aucun rapport de
+    plantage externe. Les données nécessaires sont traitées localement. Les
+    services externes utilisés par certaines fonctions sont décrits ci-dessous.</p>
+
+  <h3>3. Données conservées sur le téléphone</h3>
+  <table><thead><tr><th>Données</th><th>Usage</th><th>Stockage</th></tr></thead><tbody>
+    <tr><td>Séances, charges, répétitions, programmes</td><td>Journal et progression</td><td>Base locale</td></tr>
+    <tr><td>Mensurations, poids, objectifs</td><td>Indicateurs et graphiques</td><td>Base ou préférences locales</td></tr>
+    <tr><td>Repas et repères nutritionnels</td><td>Journal et calculs</td><td>Base ou préférences locales</td></tr>
+    <tr><td>Photos de progression</td><td>Comparaison visuelle</td><td>Fichiers locaux</td></tr>
+    <tr><td>Réglages, rappels, langue</td><td>Personnalisation</td><td>Préférences locales</td></tr>
+    <tr><td>État VIKTOR+</td><td>Maintenir l’accès</td><td>Préférence locale</td></tr>
+  </tbody></table>
+  <p>Anto Labs ne peut pas consulter ces données à distance.</p>
+
+  <h3>4. Sauvegarde Android gérée par Google</h3>
+  <p>Si la sauvegarde Android est activée dans le compte Google de l’appareil,
+    Android peut copier les préférences de VIKTOR et sa base locale vers
+    l’espace privé de ce compte, les restaurer sur un autre appareil ou les
+    transférer directement vers un nouveau téléphone. Les préférences
+    comprennent notamment la langue, les rappels, certains objectifs ou
+    repères saisis et l’état local de l’abonnement ; la base comprend
+    notamment les séances, les mensurations, les repas et l’historique.</p>
+  <p>Les photos sont exclues de cette sauvegarde automatique. VIKTOR n’ouvre
+    aucune connexion pour cette opération et Anto Labs n’accède pas à la
+    copie. Google fournit et contrôle ce service selon la politique du compte
+    Google. L’utilisateur peut désactiver la sauvegarde Android dans les
+    réglages du téléphone.</p>
+
+  <h3>4 bis. Scanner et recherche nutritionnelle facultative</h3>
+  <p>Le lecteur de codes-barres fourni par les services Google Play est lancé
+    uniquement à la demande. Son module peut nécessiter un téléchargement. VIKTOR
+    reçoit la valeur et le format du code lu.</p>
+  <p>La saisie manuelle reste disponible hors ligne. Une recherche dans Open Food
+    Facts ne démarre qu’après une action explicite. Elle transmet par HTTPS le
+    code-barres, la langue de l’application et la version de VIKTOR à
+    <code>world.openfoodfacts.org</code>. Open Food Facts reçoit aussi l’adresse IP nécessaire
+    à la connexion. Le journal alimentaire, le profil et les autres données locales
+    ne sont pas transmis. Anto Labs ne reçoit pas ces recherches.</p>
+
+  <h3>5. Abonnement VIKTOR+</h3>
+  <p>Google Play fournit la boutique et traite le paiement. VIKTOR lui demande
+    les produits, les prix, l’éligibilité et l’état de l’achat. L’application
+    ne reçoit aucun numéro de carte et garde seulement un état d’accès VIKTOR+
+    sur l’appareil.</p>
+  <p>Google met cependant des informations de commande à la disposition de
+    l’éditeur dans Play Console : identifiant de commande, adresse e-mail de
+    l’acheteur, produit, montant, taxes, statut et historique. Elles servent
+    uniquement au support, aux remboursements, à la lutte contre la fraude et
+    aux obligations comptables, fiscales ou légales. Elles ne sont pas
+    rapprochées des séances, mensurations, repas ou photos locales. Un export
+    nécessaire à la comptabilité ou à un litige est conservé pendant la seule
+    durée légale applicable, avec un accès limité. Les bases juridiques sont
+    l’exécution du service et du support demandé, l’intérêt légitime de sécuriser
+    les commandes et les obligations comptables, fiscales ou judiciaires.</p>
+
+  <h3>6. Permissions</h3>
+  <table><thead><tr><th>Accès</th><th>Usage</th></tr></thead><tbody>
+    <tr><td>Reconnaissance d’activité</td><td>Lire les pas pour VIKTOR et son widget</td></tr>
+    <tr><td>Notifications</td><td>Envoyer les rappels locaux activés</td></tr>
+    <tr><td>Vibration</td><td>Signaler la fin d’un repos</td></tr>
+    <tr><td>Photos, à la demande</td><td>Importer une photo de progression choisie</td></tr>
+  </tbody></table>
+  <p>VIKTOR ne demande pas les contacts, la position ou le microphone. Ces
+    données ne sont pas envoyées à Anto Labs.</p>
+
+  <h3>7. Export, effacement et désinstallation</h3>
+  <ul><li>Exporter : Réglages → Sauvegarde → Exporter.</li>
+    <li>Effacer : Réglages → Zone de danger.</li>
+    <li>Désinstaller : supprime la base et les fichiers locaux, sous réserve
+      des préférences que la sauvegarde Android peut restaurer.</li></ul>
+  <p>La désinstallation ne résilie pas l’abonnement. Pour le gérer :
+    <a href="https://play.google.com/store/account/subscriptions?package=com.antolabs.viktor">centre des abonnements Google Play</a>.</p>
+
+  <h3>8. Contact volontaire par e-mail</h3>
+  <p>Un e-mail envoyé au support transmet l’adresse, le message et les pièces
+    choisies. Ils servent uniquement à répondre, traiter une réclamation,
+    protéger la sécurité ou respecter la loi. Ils sont supprimés au plus tard
+    24 mois après le dernier échange, sauf litige ou obligation légale. N’envoyez
+    ni numéro de carte ni dossier médical.</p>
+
+  <h3>9. Droits</h3>
+  <p>L’utilisateur contrôle les données locales par l’export, la modification
+    et l’effacement. Pour les données envoyées par e-mail ou accessibles dans
+    Play Console, il peut demander
+    l’accès, la rectification, l’effacement, la limitation ou l’opposition à
+    l’adresse de contact. Une réclamation peut être déposée auprès de la
+    <a href="https://www.cnil.fr/fr/plaintes">CNIL</a>. Une obligation
+    comptable, fiscale, antifraude ou contentieuse peut limiter l’effacement.</p>
+
+  <h3>9 bis. Site juridique</h3>
+  <p>Ces pages n’intègrent aucun outil d’audience, publicité ou cookie déposé
+    par Anto Labs. GitHub Pages peut traiter des journaux techniques selon sa
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">propre politique de confidentialité</a>.</p>
+
+  <h3>10. Enfants, sécurité et changements</h3>
+  <p>VIKTOR est accessible à partir de 13 ans et n’est pas destinée aux enfants
+    de moins de 13 ans. L’utilisation locale ne crée aucun compte Anto Labs et
+    ne transmet ni journal alimentaire ni profil à Anto Labs. Les échanges
+    externes possibles sont ceux décrits dans cette politique et dépendent des
+    fonctions utilisées. Un mineur ne doit pas acheter sans l’autorisation de
+    son représentant légal et du titulaire du compte Google Play. Le stockage
+    local ne protège pas un téléphone perdu, déverrouillé ou compromis. Une
+    évolution substantielle sera datée et annoncée avant de nouveaux traitements.</p>
+
+  <h3>11. Document lié</h3>
+  <p>Les conditions d’utilisation et d’abonnement complètes ne sont pas encore
+    publiées. Leur lien sera ajouté après leur publication.</p>
+
+  <h2>English version</h2>
+  <h3>1. Controller and scope</h3>
+  <p>The controller is <code>[[LEGAL IDENTITY TO COMPLETE]]</code>, trading as
+    Anto Labs - Software Workshop, at
+    <code>[[BUSINESS ADDRESS TO COMPLETE]]</code>. Email:
+    <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a>.
+    This policy also covers order data the publisher can access in Play
+    Console. Google separately processes Google Play purchases and Android
+    backup under the user’s Google account settings.</p>
+
+  <h3>2. The principle</h3>
+  <p>Anto Labs does not receive workouts, measurements, photos, meals, or
+    settings entered in VIKTOR. The app has no Anto Labs account, server,
+    advertising, analytics, or outside crash reporting. App data is processed
+    locally. External services used by some features are described below.</p>
+
+  <h3>3. Local storage</h3>
+  <p>Workouts, measurements, meals, photos, settings, and the VIKTOR+ access
+    state are stored in the app’s local database, files, or preferences. Anto
+    Labs cannot view them remotely.</p>
+
+  <h3>4. Android backup provided by Google</h3>
+  <p>If Android backup is on for the device’s Google account, Android may copy
+    VIKTOR’s preferences and its local database to that account’s private
+    storage, restore them on another device, or transfer them directly to a
+    new phone. Preferences include, among other things, language, reminders,
+    some goals or references you entered, and the local subscription state;
+    the database includes, among other things, workouts, measurements,
+    meals, and history.</p>
+  <p>Photos are excluded from this automatic backup. VIKTOR does not open a
+    connection for the backup, and Anto Labs cannot access the copy. Google
+    provides and controls this service under the Google account policy. You
+    can turn Android backup off in device settings.</p>
+
+  <h3>4a. Optional nutrition scanner and lookup</h3>
+  <p>The barcode reader provided by Google Play services starts only when requested.
+    Its module may need to be downloaded. VIKTOR receives the value and format of
+    the scanned code.</p>
+  <p>Manual entry remains available offline. An Open Food Facts lookup starts only
+    after an explicit action. It sends the barcode, app language, and VIKTOR version
+    over HTTPS to <code>world.openfoodfacts.org</code>. Open Food Facts also receives the IP
+    address needed for the connection. The food log, profile, and other local data
+    are not sent. Anto Labs does not receive these lookups.</p>
+
+  <h3>5. VIKTOR+ and permissions</h3>
+  <p>Google Play provides checkout and processes payment. VIKTOR asks for
+    products, prices, offer eligibility, and purchase state. The app receives
+    no card number. Google nevertheless makes order ID, buyer email, product,
+    amount, tax, status, and order history available to the publisher in Play
+    Console. Anto Labs uses them only for support, refunds, fraud prevention,
+    and accounting, tax, or legal duties, without combining them with local
+    fitness data. The legal bases are performance of the service and requested
+    support, legitimate fraud-prevention interests, and applicable accounting,
+    tax, or judicial duties. Activity recognition shows steps, notifications
+    send local reminders, vibration signals rest, and photo access imports a
+    photo you choose. The app does not ask for contacts, location, or microphone
+    access.</p>
+
+  <h3>6. Export, deletion, and cancellation</h3>
+  <p>Use Settings → Backup → Export or Settings → Danger zone. Uninstalling may
+    delete the local database and photos but does not cancel a subscription.
+    <a href="https://play.google.com/store/account/subscriptions?package=com.antolabs.viktor">Manage or cancel on Google Play</a>.</p>
+
+  <h3>7. Email contact and rights</h3>
+  <p>If you email support, Anto Labs receives your address, message, and chosen
+    files. They are used only to reply, handle complaints, protect security, or
+    meet legal duties, and are deleted within 24 months after the last exchange
+    unless a dispute or law needs longer retention. The same rights apply to
+    order data available in Play Console, subject to accounting, tax,
+    fraud-prevention, or litigation duties. You may request access, correction,
+    deletion, restriction, or objection by email, and may contact
+    the <a href="https://www.cnil.fr/en/complaints">CNIL</a>.</p>
+
+  <h3>7a. Legal website</h3>
+  <p>These pages include no Anto Labs analytics, advertising, or cookie. GitHub
+    Pages may process technical logs under its
+    <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">own privacy statement</a>.</p>
+
+  <h3>8. Children, security, and changes</h3>
+  <p>VIKTOR is available from age 13 and is not intended for children under 13.
+    Local use creates no Anto Labs account and sends neither the food log nor
+    the profile to Anto Labs. Any external exchanges are those described in
+    this policy and depend on the features used. A minor must not buy without
+    the legal guardian’s and Google Play account holder’s authorization. Local
+    storage cannot protect an unlocked, lost, or compromised phone. Material
+    privacy changes will be dated and announced before new processing starts.</p>
+
+  <h3>9. Related document</h3>
+  <p>The complete VIKTOR terms of use and subscription have not been published
+    yet. Their link will be added after publication.</p>
+</main>
+<footer>Anto Labs - Software Workshop ·
+  <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></footer>
 </body>
 </html>
