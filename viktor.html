@@ -43,7 +43,7 @@
     remplace pas ces informations. Remplacer tous les champs entre doubles
     crochets et faire valider la portée territoriale avant publication.</p>
   <p class="meta">Application : VIKTOR: Smart Elite Coach
-    (<code>com.antolabs.viktor</code>)<br>Version : 6 septembre 2026<br>
+    (<code>com.antolabs.viktor</code>)<br>Version : 14 septembre 2026<br>
     Contact : <a href="mailto:contact.antolabs@gmail.com">contact.antolabs@gmail.com</a></p>
 
   <h2>Version française</h2>
@@ -62,15 +62,18 @@
     Anto Labs, aucune publicité, aucun outil d’audience et aucun rapport de
     plantage externe. Les données nécessaires sont traitées localement. Les
     services externes utilisés par certaines fonctions sont décrits ci-dessous.</p>
+  <p>Un compte Google peut être relié à VIKTOR, à votre choix, pour sauvegarder vos données sur votre propre Google Drive et les retrouver sur un autre appareil (§ 4 ter). Sans ce choix, rien ne quitte le téléphone par cette voie.</p>
 
   <h3>3. Données conservées sur le téléphone</h3>
   <table><thead><tr><th>Données</th><th>Usage</th><th>Stockage</th></tr></thead><tbody>
     <tr><td>Séances, charges, répétitions, programmes</td><td>Journal et progression</td><td>Base locale</td></tr>
     <tr><td>Mensurations, poids, objectifs</td><td>Indicateurs et graphiques</td><td>Base ou préférences locales</td></tr>
     <tr><td>Repas et repères nutritionnels</td><td>Journal et calculs</td><td>Base ou préférences locales</td></tr>
-    <tr><td>Photos de progression</td><td>Comparaison visuelle</td><td>Fichiers locaux</td></tr>
+    <tr><td>Photos de progression</td><td>Comparaison visuelle</td><td>Fichiers locaux, dans le dossier privé de l’application</td></tr>
+    <tr><td>Compteur de pas du jour et son historique</td><td>Afficher les pas dans VIKTOR et son widget</td><td>Préférences locales</td></tr>
     <tr><td>Réglages, rappels, langue</td><td>Personnalisation</td><td>Préférences locales</td></tr>
     <tr><td>État VIKTOR+</td><td>Maintenir l’accès</td><td>Préférence locale</td></tr>
+    <tr><td>Ce qu’affichent les widgets d’écran d’accueil</td><td>Alimenter les deux widgets Android</td><td>Préférences locales, dans un fichier séparé et exclu de la sauvegarde</td></tr>
   </tbody></table>
   <p>Anto Labs ne peut pas consulter ces données à distance.</p>
 
@@ -82,23 +85,46 @@
     comprennent notamment la langue, les rappels, certains objectifs ou
     repères saisis et l’état local de l’abonnement ; la base comprend
     notamment les séances, les mensurations, les repas et l’historique.</p>
-  <p>Les photos sont exclues de cette sauvegarde automatique. VIKTOR n’ouvre
-    aucune connexion pour cette opération et Anto Labs n’accède pas à la
-    copie. Google fournit et contrôle ce service selon la politique du compte
-    Google. L’utilisateur peut désactiver la sauvegarde Android dans les
-    réglages du téléphone.</p>
+  <p>La copie est restreinte à ce qu’elle nomme : les préférences de
+    l’application et le fichier <code>viktor.db</code> avec ses journaux. Les
+    photos de progression en sont donc exclues, et le fichier de préférences
+    des widgets aussi. Sur Android 9 et au-delà, Google chiffre cette
+    sauvegarde de bout en bout avec le code, le schéma ou le mot de passe de
+    l’appareil : l’éditeur ne peut pas la lire.</p>
+  <p>VIKTOR n’ouvre aucune connexion pour cette opération et Anto Labs
+    n’accède pas à la copie. Google fournit et contrôle ce service selon la
+    politique du compte Google. L’utilisateur peut désactiver la sauvegarde
+    Android dans les réglages du téléphone.</p>
 
   <h3>4 bis. Scanner et recherche nutritionnelle facultative</h3>
   <p>Le lecteur de codes-barres fourni par les services Google Play est lancé
-    uniquement à la demande. Son module peut nécessiter un téléchargement. VIKTOR
-    reçoit la valeur et le format du code lu.</p>
+    uniquement à la demande. Son module peut nécessiter un téléchargement.
+    C’est Google Play qui ouvre la caméra, dans sa propre interface : VIKTOR ne
+    demande aucune permission de caméra et n’en déclare aucune au manifeste.
+    VIKTOR reçoit seulement la valeur et le format du code lu.</p>
   <p>La saisie manuelle reste disponible hors ligne. Une recherche dans Open Food
     Facts ne démarre qu’après une action explicite. Elle transmet par HTTPS le
     code-barres, la langue de l’application et la version de VIKTOR à
     <code>world.openfoodfacts.org</code>. Open Food Facts reçoit aussi l’adresse IP nécessaire
     à la connexion. Le journal alimentaire, le profil et les autres données locales
     ne sont pas transmis. Anto Labs ne reçoit pas ces recherches.</p>
+  <p><strong>Ce que ce composant de Google fait de son côté.</strong> Le lecteur
+    de codes-barres repose sur les services Google Play et sur la bibliothèque
+    ML Kit. Celle-ci embarque son propre canal de télémétrie, qui s’initialise
+    au lancement de VIKTOR, avant même que l’application ne s’affiche, et non
+    au moment où vous scannez. Ce canal peut rapporter à Google son propre
+    usage et son bon fonctionnement, selon la politique de confidentialité de
+    Google et non selon celle-ci. Anto Labs n’en reçoit rien, ne le configure
+    pas et ne peut pas le couper : la bibliothèque n’offre aucun réglage de
+    retrait. Aucune de vos données de séance, de mensuration, de repas ou de
+    photo n’y passe.</p>
 
+  <h3>4 ter. Compte Google et sauvegarde sur Google Drive (facultatifs)</h3>
+  <p>VIKTOR peut être relié à un compte Google. C’est facultatif : l’application fonctionne entièrement sans compte, et la connexion est proposée à l’arrivée puis dans Plus → Réglages → « Compte Google », où elle se refuse ou se défait à tout moment.</p>
+  <p><strong>Ce que la connexion apporte à l’application.</strong> Google fournit à VIKTOR l’adresse e-mail, le nom et l’image du compte choisi. L’application les affiche dans ses Réglages et les conserve sur l’appareil pour retrouver le compte à l’ouverture suivante. Ces informations ne sont envoyées à aucun serveur Anto Labs, et Anto Labs ne les reçoit pas.</p>
+  <p><strong>La sauvegarde sur votre Google Drive.</strong> Une fois un compte connecté, « Sauvegarder maintenant » envoie une copie de vos données VIKTOR (profil, séances, mensurations, journal alimentaire, photos de progression et réglages) dans l’espace privé que Google Drive réserve aux applications. Cet espace appartient à votre compte Google : il n’apparaît pas parmi vos fichiers Drive, seule VIKTOR peut y lire et y écrire, et Anto Labs n’y a aucun accès. Après cette première sauvegarde, VIKTOR en refait une au plus une fois par jour, à l’ouverture, si vos données ont changé ; l’interrupteur « Sauvegarde automatique » et le réglage « Seulement en Wi-Fi » sont dans la même carte. VIKTOR garde jusqu’à sept sauvegardes par appareil et retire la plus ancienne au-delà. La copie voyage en HTTPS ; VIKTOR ne la chiffre pas lui-même avant l’envoi, et Google la conserve selon les règles de votre compte Google.</p>
+  <p><strong>La restauration.</strong> « Restaurer une sauvegarde » liste vos sauvegardes et remplace les données de l’appareil par celle que vous choisissez, après une copie de secours locale à laquelle vous pouvez revenir. À l’arrivée sur un nouvel appareil, VIKTOR propose cette restauration si un compte est connecté.</p>
+  <p><strong>Se déconnecter, supprimer.</strong> « Se déconnecter » retire le compte de l’appareil et conserve vos données locales ; VIKTOR n’envoie alors plus rien. Les sauvegardes déjà déposées restent dans votre Google Drive, sous votre seul contrôle : vous les supprimez depuis Google Drive → Paramètres → « Gérer les applications » → VIKTOR → « Supprimer les données d’application masquées », ou en retirant l’accès de VIKTOR à votre compte Google (myaccount.google.com → Données et confidentialité → Applications tierces). « Réinitialiser l’application » efface ce que VIKTOR garde sur le téléphone, copies de secours comprises, et déconnecte le compte ; il ne supprime pas les sauvegardes déjà présentes sur votre Drive, qui vous appartiennent.</p>
   <h3>5. Abonnement VIKTOR+</h3>
   <p>Google Play fournit la boutique et traite le paiement. VIKTOR lui demande
     les produits, les prix, l’éligibilité et l’état de l’achat. L’application
@@ -116,18 +142,55 @@
     les commandes et les obligations comptables, fiscales ou judiciaires.</p>
 
   <h3>6. Permissions</h3>
-  <table><thead><tr><th>Accès</th><th>Usage</th></tr></thead><tbody>
-    <tr><td>Reconnaissance d’activité</td><td>Lire les pas pour VIKTOR et son widget</td></tr>
-    <tr><td>Notifications</td><td>Envoyer les rappels locaux activés</td></tr>
-    <tr><td>Vibration</td><td>Signaler la fin d’un repos</td></tr>
-    <tr><td>Photos, à la demande</td><td>Importer une photo de progression choisie</td></tr>
+  <p>L’application installée déclare <strong>dix</strong> permissions. Quatre
+    viennent de VIKTOR lui-même ; les six autres sont ajoutées automatiquement
+    par les bibliothèques qu’il utilise (widgets Android, facturation Google
+    Play, lecteur de codes-barres). Cette liste est relevée sur l’application
+    construite, pas sur le code source : c’est la même que celle qu’Android
+    vous montre.</p>
+  <table><thead><tr><th>Accès</th><th>D’où il vient</th><th>Usage</th></tr></thead><tbody>
+    <tr><td>Reconnaissance d’activité</td><td>déclarée par VIKTOR</td><td>Lire les pas pour VIKTOR et son widget. C’est la seule permission que VIKTOR vous demande par une boîte de dialogue</td></tr>
+    <tr><td>Notifications</td><td>déclarée par VIKTOR</td><td>Envoyer les rappels locaux activés, et la notification de séance en cours</td></tr>
+    <tr><td>Redémarrage terminé</td><td>déclarée par VIKTOR, et ajoutée aussi par la bibliothèque de travaux d’Android</td><td>Reprogrammer ces mêmes rappels après un redémarrage du téléphone</td></tr>
+    <tr><td>Vibration</td><td>déclarée par VIKTOR</td><td>Signaler la fin d’un repos</td></tr>
+    <tr><td>Accès à Internet</td><td>ajoutée par les bibliothèques de Google</td><td>Parler à Google Play pour l’abonnement, et lancer la recherche de produit du § 4 bis. VIKTOR n’émet aucune autre requête ; le lecteur de codes-barres de Google, lui, a son propre canal, décrit au § 4 bis</td></tr>
+    <tr><td>État du réseau</td><td>ajoutée par la bibliothèque de travaux d’Android et par celle du lecteur de codes-barres</td><td>Savoir si le réseau répond avant de tenter un envoi</td></tr>
+    <tr><td>Maintien en éveil</td><td>ajoutée par la bibliothèque de travaux d’Android</td><td>Tenir le téléphone éveillé le temps de rafraîchir un widget</td></tr>
+    <tr><td>Service au premier plan</td><td>ajoutée par la bibliothèque de travaux d’Android</td><td>Déclarée par cette bibliothèque. VIKTOR ne démarre aucun service au premier plan</td></tr>
+    <tr><td>Facturation Google Play</td><td>ajoutée par la bibliothèque de facturation</td><td>Ouvrir la boutique Google Play pour l’abonnement VIKTOR+</td></tr>
+    <tr><td>Réception interne (<code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>)</td><td>générée par les bibliothèques AndroidX</td><td>Permission technique interne à l’application. Elle ne vous est jamais demandée et n’ouvre aucun accès à vos données</td></tr>
+    <tr><td>Photos, à la demande</td><td>aucune permission</td><td>Importer une photo de progression choisie, par le sélecteur du système, qui ne donne accès qu’au fichier choisi</td></tr>
   </tbody></table>
-  <p>VIKTOR ne demande pas les contacts, la position ou le microphone. Ces
-    données ne sont pas envoyées à Anto Labs.</p>
+  <p>VIKTOR ne demande ni la caméra, ni les contacts, ni la position, ni le
+    microphone, ni l’accès au stockage. Aucun identifiant publicitaire n’est
+    déclaré : la permission correspondante est explicitement retirée du
+    manifeste. Les données issues des permissions ci-dessus ne sont pas
+    envoyées à Anto Labs.</p>
+
+  <h3>6 bis. Widgets, notifications et partage</h3>
+  <p>Deux widgets peuvent être posés sur l’écran d’accueil Android. Le premier
+    affiche l’indicateur choisi par l’utilisateur parmi neuf ; le second pilote
+    la séance en cours. Ce qu’ils montrent est écrit dans un fichier de
+    préférences local, lu par le système d’Android pour dessiner le widget.
+    Rien ne sort de l’appareil.</p>
+  <p>Pendant une séance, et seulement si l’utilisateur l’a activé, une
+    notification persistante affiche l’exercice, la série et le chrono de
+    repos. Elle peut apparaître sur l’écran verrouillé ; le réglage « Séance
+    sur l’écran verrouillé » décide du détail affiché.</p>
+  <p>Le partage est toujours un geste de l’utilisateur. Il peut envoyer, par la
+    feuille de partage d’Android et vers l’application de son choix, une image
+    PNG de sa séance ou de sa semaine, générée sur l’appareil, ou son fichier
+    d’export. VIKTOR n’envoie rien de lui-même.</p>
 
   <h3>7. Export, effacement et désinstallation</h3>
-  <ul><li>Exporter : Réglages → Sauvegarde → Exporter.</li>
-    <li>Effacer : Réglages → Zone de danger.</li>
+  <ul><li>Exporter : Plus → Réglages → Données → « Exporter vos données
+      (JSON) ». L’export contient l’historique mais pas les photos.</li>
+    <li>Importer : Plus → Réglages → Données → « Importer une sauvegarde ».
+      L’import remplace les données existantes.</li>
+    <li>Sauvegarder sur Google Drive, restaurer : Plus → Réglages → « Compte Google » puis « Sauvegarde sur Google Drive » (§ 4 ter). Les sauvegardes déposées se suppriment depuis Google Drive → « Gérer les applications ».</li>
+    <li>Effacer : Plus → Réglages → Données → « Réinitialiser l’application ».
+      La confirmation demande de taper le mot EFFACER. Efface aussi les copies de
+      secours locales et déconnecte le compte Google.</li>
     <li>Désinstaller : supprime la base et les fichiers locaux, sous réserve
       des préférences que la sauvegarde Android peut restaurer.</li></ul>
   <p>La désinstallation ne résilie pas l’abonnement. Pour le gérer :
@@ -183,11 +246,14 @@
     settings entered in VIKTOR. The app has no Anto Labs account, server,
     advertising, analytics, or outside crash reporting. App data is processed
     locally. External services used by some features are described below.</p>
+  <p>You may link a Google account to VIKTOR, if you choose, to back up your data to your own Google Drive and get it back on another device (§ 4b). Without that choice, nothing leaves the phone this way.</p>
 
   <h3>3. Local storage</h3>
-  <p>Workouts, measurements, meals, photos, settings, and the VIKTOR+ access
-    state are stored in the app’s local database, files, or preferences. Anto
-    Labs cannot view them remotely.</p>
+  <p>Workouts, measurements, meals, photos, settings, the daily step count and
+    its history, and the VIKTOR+ access state are stored in the app’s local
+    database, files, or preferences. What the home screen widgets display sits
+    in a separate preferences file, excluded from backup. Anto Labs cannot
+    view any of it remotely.</p>
 
   <h3>4. Android backup provided by Google</h3>
   <p>If Android backup is on for the device’s Google account, Android may copy
@@ -197,21 +263,41 @@
     some goals or references you entered, and the local subscription state;
     the database includes, among other things, workouts, measurements,
     meals, and history.</p>
-  <p>Photos are excluded from this automatic backup. VIKTOR does not open a
-    connection for the backup, and Anto Labs cannot access the copy. Google
-    provides and controls this service under the Google account policy. You
-    can turn Android backup off in device settings.</p>
+  <p>The copy is restricted to what it names: the app’s preferences and the
+    <code>viktor.db</code> file with its journals. Progress photos are
+    therefore excluded, and so is the widget preferences file. On Android 9 and
+    later, Google encrypts this backup end to end with the device PIN, pattern,
+    or password, so the publisher cannot read it.</p>
+  <p>VIKTOR does not open a connection for the backup, and Anto Labs cannot
+    access the copy. Google provides and controls this service under the Google
+    account policy. You can turn Android backup off in device settings.</p>
 
   <h3>4a. Optional nutrition scanner and lookup</h3>
-  <p>The barcode reader provided by Google Play services starts only when requested.
-    Its module may need to be downloaded. VIKTOR receives the value and format of
+  <p>The barcode reader provided by Google Play services starts only when
+    requested. Its module may need to be downloaded. Google Play opens the
+    camera in its own interface: VIKTOR requests no camera permission and
+    declares none in its manifest. VIKTOR only receives the value and format of
     the scanned code.</p>
   <p>Manual entry remains available offline. An Open Food Facts lookup starts only
     after an explicit action. It sends the barcode, app language, and VIKTOR version
     over HTTPS to <code>world.openfoodfacts.org</code>. Open Food Facts also receives the IP
     address needed for the connection. The food log, profile, and other local data
     are not sent. Anto Labs does not receive these lookups.</p>
+  <p><strong>What this Google component does on its own.</strong> The barcode
+    reader relies on Google Play services and on the ML Kit library. That
+    library carries its own telemetry channel, which starts when VIKTOR
+    launches, before the app is even shown, and not when you scan. It may
+    report its own usage and health to Google under Google's privacy policy,
+    not under this one. Anto Labs receives nothing from it, does not configure
+    it, and cannot turn it off: the library offers no opt-out setting. None of
+    your workout, measurement, meal, or photo data goes through it.</p>
 
+  <h3>4b. Google account and Google Drive backup (optional)</h3>
+  <p>VIKTOR can be linked to a Google account. This is optional: the whole app works without an account, and the sign-in is offered when you arrive and later in More → Settings → “Google Account”, where you can decline or sign out at any time.</p>
+  <p><strong>What the sign-in gives the app.</strong> Google provides VIKTOR with the email address, name, and picture of the chosen account. The app shows them in Settings and keeps them on the device so it can find the account again at the next launch. They are not sent to any Anto Labs server, and Anto Labs does not receive them.</p>
+  <p><strong>Backup to your Google Drive.</strong> Once an account is connected, “Back up now” sends a copy of your VIKTOR data (profile, workouts, measurements, food log, progress photos, and settings) to the private space that Google Drive reserves for apps. That space belongs to your Google account: it does not appear among your Drive files, only VIKTOR can read and write there, and Anto Labs has no access to it. After this first backup, VIKTOR makes a new one at most once a day, when the app opens, if your data has changed; the “Automatic backup” switch and the “Wi-Fi only” setting are in the same card. VIKTOR keeps up to seven backups per device and removes the oldest beyond that. The copy travels over HTTPS; VIKTOR does not encrypt it itself before sending, and Google stores it under the rules of your Google account.</p>
+  <p><strong>Restoring.</strong> “Restore a backup” lists your backups and replaces the device’s data with the one you choose, after a local safety copy you can go back to. On a new device, VIKTOR offers this restore when an account is connected.</p>
+  <p><strong>Signing out, deleting.</strong> “Sign out” removes the account from the device and keeps your local data; VIKTOR then sends nothing further. Backups already stored stay in your Google Drive, under your sole control: delete them from Google Drive → Settings → “Manage apps” → VIKTOR → “Delete hidden app data”, or remove VIKTOR’s access to your Google account (myaccount.google.com → Data & privacy → Third-party apps). “Reset the app” erases what VIKTOR keeps on the phone, safety copies included, and signs the account out; it does not delete the backups already in your Drive, which belong to you.</p>
   <h3>5. VIKTOR+ and permissions</h3>
   <p>Google Play provides checkout and processes payment. VIKTOR asks for
     products, prices, offer eligibility, and purchase state. The app receives
@@ -221,13 +307,45 @@
     and accounting, tax, or legal duties, without combining them with local
     fitness data. The legal bases are performance of the service and requested
     support, legitimate fraud-prevention interests, and applicable accounting,
-    tax, or judicial duties. Activity recognition shows steps, notifications
-    send local reminders, vibration signals rest, and photo access imports a
-    photo you choose. The app does not ask for contacts, location, or microphone
-    access.</p>
+    tax, or judicial duties.</p>
+  <p>The installed app declares <strong>ten</strong> permissions: four from
+    VIKTOR itself, six added automatically by the libraries it uses. Activity
+    recognition shows steps and is the only permission VIKTOR asks you for in a
+    dialog; notifications send local reminders and the ongoing workout
+    notification; the boot-completed permission reschedules those reminders
+    after a restart; vibration signals rest. Added by libraries: internet
+    access talks to Google Play and runs the product lookup of section 4a, and
+    VIKTOR makes no other request, though Google's barcode reader has a channel
+    of its own described in section 4a; network state checks whether the
+    network responds; wake lock keeps the phone awake long enough to refresh a
+    widget; foreground service is declared by the Android work library, and
+    VIKTOR starts no foreground service; Google Play billing opens the store
+    for the subscription; and an internal AndroidX receiver permission is never
+    requested from you. Photo import needs no permission: the system picker
+    grants access only to the file you choose. The app does not ask for camera,
+    contacts, location, microphone, or storage access, and no advertising
+    identifier is declared.</p>
+
+  <h3>5a. Widgets, notifications, and sharing</h3>
+  <p>Two widgets can be placed on the Android home screen. The first shows one
+    of nine indicators chosen by the user; the second controls the current
+    workout. What they display is written to a local preferences file that
+    Android reads to draw the widget. Nothing leaves the device.</p>
+  <p>During a workout, and only if the user turned it on, an ongoing
+    notification shows the exercise, the set, and the rest timer. It can appear
+    on the lock screen; the "workout on the lock screen" setting decides how
+    much detail it shows.</p>
+  <p>Sharing is always a user action. Through the Android share sheet, and to
+    the app of their choice, the user can send a PNG image of their workout or
+    week, generated on the device, or their export file. VIKTOR sends nothing
+    on its own.</p>
 
   <h3>6. Export, deletion, and cancellation</h3>
-  <p>Use Settings → Backup → Export or Settings → Danger zone. Uninstalling may
+  <p>Use More → Settings → Data → "Export your data (JSON)", which contains
+    your history but not your photos, or "Reset the app" in the same place
+    (it also erases the local safety copies and signs the Google account out).
+    Back up to Google Drive, restore: More → Settings → “Google Account” then “Google Drive backup” (§ 4b). Stored backups are deleted from Google Drive → “Manage apps”.
+    Uninstalling may
     delete the local database and photos but does not cancel a subscription.
     <a href="https://play.google.com/store/account/subscriptions?package=com.antolabs.viktor">Manage or cancel on Google Play</a>.</p>
 
